@@ -26,9 +26,9 @@ const createAd = ({offer, author}) => {
   const createPhotos = (photosList) => {
     const photosListFragment = document.createDocumentFragment();
 
-    photosList.forEach((photo) => {
+    photosList.forEach((photos) => {
       const photoElement = adElementPhotoTemplate.cloneNode();
-      adElement.src = photo;
+      adElement.src = photos;
       adElementPhotoContainer.append(photoElement);
     });
     return photosListFragment;
