@@ -20,6 +20,8 @@ const setAddressFieldValue = (address) => {
   addressField.value = `${address.lat.toFixed(5)}, ${address.lng.toFixed(5)}`;
 };
 
+addressField.value = `${CENTER_TOKIO_LAT.toFixed(5)}, ${CENTER_TOKIO_LNG.toFixed(5)}`;
+
 getDisactiveState ();
 
 const map = L.map('map-canvas')
@@ -79,7 +81,7 @@ getData(createOfferMarker, showAlert);
 
 resetButton.addEventListener('click',()=>{
   adForm.reset();
-  setAddressFieldValue ();
+  addressField.value = `${CENTER_TOKIO_LAT.toFixed(5)}, ${CENTER_TOKIO_LNG.toFixed(5)}`;
   mainPinMarker.setLatLng({
     lat: CENTER_TOKIO_LAT,
     lng: CENTER_TOKIO_LNG,
